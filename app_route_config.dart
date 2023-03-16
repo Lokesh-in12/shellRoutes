@@ -10,7 +10,6 @@ import 'package:go_router_advance/src/views/screens/settings.dart';
 import 'package:go_router_advance/src/views/screens/shell_home_page.dart';
 
 final GlobalKey<NavigatorState> _rootNavigator = GlobalKey(debugLabel: 'root');
-final GlobalKey<NavigatorState> _shellavigator = GlobalKey(debugLabel: 'shell');
 
 class MyAppRouterConfig {
   static GoRouter returnRouter(bool isAuth) {
@@ -40,7 +39,6 @@ class MyAppRouterConfig {
               const PostsPagePage(),
         ),
         ShellRoute(
-            navigatorKey: _shellavigator,
             builder: (context, state, child) => ShellHomePage(child: child),
             routes: [
               GoRoute(
